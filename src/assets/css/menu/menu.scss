@@ -1,0 +1,96 @@
+#menu{
+    max-width: 16%;
+    height: 100%;
+    background: #333269;
+    padding: 40px 0px;
+    
+    .logo-menu{
+        font-family: 'MuseoModerno', cursive;
+        margin-bottom: 47px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        .logo-text{
+            opacity: 0.7;
+            margin-left: 11px;
+            height: 37px;
+            font-size: 30px;
+            color: white;
+        }
+        .logo-text-nonactive{
+            display: none;
+        }
+    }
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 421px;
+        height: 100%;
+        .menu-list-element{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s;
+            .menu-list-element-link{
+                max-width: 120px;
+                width: 120px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                
+                color: white;
+                opacity: 0.7;
+                .menu-list-element-text{
+                    margin-left:18px;
+                }
+                .menu-list-element-text-nonactive{
+                    display: none;
+                }
+                .menu-list-element-img{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            .menu-list-element-link-nonactive{
+                justify-content: center;
+            }
+             
+        }
+        .menu-list-element-active{
+            transition: 0.2s;
+            opacity: 1;
+            border-left: solid red 5px;
+            padding-left: 37px;
+        }
+    }
+    
+        .promo-info{
+            margin: 99px auto 0px auto ;
+            position: relative;
+            width: 176.12px;
+            height: 190px;
+            background: #1D1C40;
+            border-radius: 20px;
+            padding: 60px 30px 30px 21px;
+            color: white;
+            .promo-info-background{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+            }
+            .promo-info-text{
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .promo-info-text-weight{
+                
+                font-weight: 400;
+            }
+        }
+    
+     
+}

@@ -1,0 +1,131 @@
+#menu {
+  max-width: 16%;
+  height: 100%;
+  background: #333269;
+  padding: 40px 0px;
+}
+
+#menu .logo-menu {
+  font-family: 'MuseoModerno', cursive;
+  margin-bottom: 47px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+#menu .logo-menu .logo-text {
+  opacity: 0.7;
+  margin-left: 11px;
+  height: 37px;
+  font-size: 30px;
+  color: white;
+}
+
+#menu .logo-menu .logo-text-nonactive {
+  display: none;
+}
+
+#menu .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 421px;
+  height: 100%;
+}
+
+#menu .menu-list .menu-list-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#menu .menu-list .menu-list-element .menu-list-element-link {
+  max-width: 120px;
+  width: 120px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  opacity: 0.7;
+}
+
+#menu .menu-list .menu-list-element .menu-list-element-link .menu-list-element-text {
+  margin-left: 18px;
+}
+
+#menu .menu-list .menu-list-element .menu-list-element-link .menu-list-element-text-nonactive {
+  display: none;
+}
+
+#menu .menu-list .menu-list-element .menu-list-element-link .menu-list-element-img {
+  width: 16px;
+  height: 16px;
+}
+
+#menu .menu-list .menu-list-element .menu-list-element-link-nonactive {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu .menu-list .menu-list-element-active {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 1;
+  border-left: solid red 5px;
+  padding-left: 37px;
+}
+
+#menu .promo-info {
+  margin: 99px auto 0px auto;
+  position: relative;
+  width: 176.12px;
+  height: 190px;
+  background: #1D1C40;
+  border-radius: 20px;
+  padding: 60px 30px 30px 21px;
+  color: white;
+}
+
+#menu .promo-info .promo-info-background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#menu .promo-info .promo-info-text {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#menu .promo-info .promo-info-text-weight {
+  font-weight: 400;
+}
+/*# sourceMappingURL=menu.css.map */
