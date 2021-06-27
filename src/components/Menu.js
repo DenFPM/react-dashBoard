@@ -12,16 +12,19 @@ import Transcripts from '../assets/img/transcripts.svg';
 import PromoBackground from '../assets/img/promo-background.svg';
 const Menu = ()=>{
     const menuRef = useRef()
-    const promoRef = useRef()
-    const linkTextRef = useRef();
+
 
     const [displayText, setDisplayText] = useState(true);
     const [dispayPromo, setDispayPromo] = useState(true)
+    useEffect(() => {
+        menuRef.current.offsetWidth<185?setDispayPromo(false):setDispayPromo(true)
+      menuRef.current.offsetWidth<136?setDisplayText(false):setDisplayText(true)
+    }, []);
     window.onresize = ()=>{
       menuRef.current.offsetWidth<185?setDispayPromo(false):setDispayPromo(true)
       menuRef.current.offsetWidth<136?setDisplayText(false):setDisplayText(true)
     }
-    
+    console.log(window.screen)
     return(
         <div id="menu" ref={menuRef}>
             <a href="#" className="logo-menu"><img src={MenuLogo} alt="logo"></img><p className={`logo-text ${displayText?"":"logo-text-nonactive"}`}>Unive</p></a>
@@ -29,53 +32,53 @@ const Menu = ()=>{
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Dashboard} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Dashboard</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`}>Dashboard</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Courses} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Courses</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Courses</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Materials} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Materials</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Materials</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Calendar} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Calendar</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Calendar</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Transcripts} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Transcripts</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Transcripts</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Grades} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Grades</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Grades</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Attendance} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Attendance</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} >Attendance</p>
                     </a>
                 </li>
                 <li className="menu-list-element">
                     <a className={`menu-list-element-link ${displayText?"":"menu-list-element-link-nonactive"}`} href="#">
                         <img src={Settings} alt="d" className="menu-list-element-img"></img>
-                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`} ref={linkTextRef}>Settings</p>
+                        <p className={`menu-list-element-text ${displayText?"":"menu-list-element-text-nonactive"}`}>Settings</p>
                     </a>
                 </li>
             </ul>
-            <div className="promo-info" ref={promoRef}>
+            <div className={`promo-info ${dispayPromo?"":"promo-info-nonactive"}`} >
                 <h4 className="promo-info-text promo-info-text-weight" >Level up your skills,</h4>
                 <h3 className="promo-info-text">Software</h3>
                 <h3 className="promo-info-text">Engineering</h3>

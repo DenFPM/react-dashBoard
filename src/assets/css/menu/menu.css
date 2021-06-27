@@ -128,4 +128,8 @@
 #menu .promo-info .promo-info-text-weight {
   font-weight: 400;
 }
+
+#menu .promo-info-nonactive {
+  display: none;
+}
 /*# sourceMappingURL=menu.css.map */
